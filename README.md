@@ -8,9 +8,9 @@ usage: encrypt.py [-h] [--input INPUT] [--symbol SYMBOL]
 encrypt pyc files. powered by realxie.
 
 optional arguments:
-  -h, --help       show this help message and exit
-  --input INPUT    the target pyc or direcotry
-  --symbol SYMBOL  the symbols file path
+	-h, --help       show this help message and exit
+	--input INPUT    the target pyc or direcotry
+	--symbol SYMBOL  the symbols file path
 
 
 # testcase
