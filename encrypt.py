@@ -131,7 +131,7 @@ def process_dir(fdir, symbol_dict):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Process some inputs.')
+    parser = argparse.ArgumentParser(description='encrypt pyc files.\npowered by realxie.')
     parser.add_argument('--input', help='the target pyc or direcotry')
     parser.add_argument('--symbol', help='the symbols file path')
     args = parser.parse_args()
