@@ -105,5 +105,5 @@ def gen_new_code(code, symbol_dict):
 	return opt_code
 
 symbol_dict = load_symbol_file("symbols.txt")
-process_file(sys.argv[1], symbol_dict)
+process_file(sys.argv[1], symbol_dict) 
 save_symbol_file("symbols.txt", symbol_dict)
