@@ -16,6 +16,7 @@ optional arguments:
 # testcase
 ## 1 uncompile test.pyc with uncompyle2
 	realxie$ ncompyle2 ./test/test.pyc
+```python
 	# 2018.07.09 14:27:09 DST
 	#Embedded file name: test.py
 	import sys
@@ -50,6 +51,7 @@ optional arguments:
 	+++ okay decompyling test.pyc
 	# decompiled 1 files: 1 okay, 0 failed, 0 verify failed
 	# 2018.07.09 14:27:09 DST
+```
 
 
 ## 2 encrypt the pyc
