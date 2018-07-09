@@ -1,5 +1,6 @@
 import sys
 import os as myos
+import test_import as my_module
 
 def myfunc(args = None, second_l = "hhh"):
 	var = 2
@@ -24,3 +25,7 @@ print obj.id
 
 obj.myfunc()
 print getattr(obj, "myfunc")
+
+print my_module.sum("abc ", "egf")
+
+print my_module.do_something()
