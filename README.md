@@ -15,7 +15,7 @@ optional arguments:
 
 # testcase
 ## 1 uncompile test.pyc with uncompyle2
-	realxie$ ncompyle2 ./test/test.pyc
+	realxie$ uncompyle2 ./test/test.pyc
 ```python
 # 2018.07.09 14:27:09 DST
 #Embedded file name: test.py
