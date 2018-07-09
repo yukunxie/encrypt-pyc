@@ -57,42 +57,42 @@ optional arguments:
 
 	the uncompile result is following. the code is unreadable.^^
 
-	```python
-	# 2018.07.09 14:52:57 DST
-	#Embedded file name: @@xaBtIiWf6&hJq1@
-	import sys
-	import os as myos
-	
-	def @!FlsTUOG(i_+7BX@(args = None, second_l = 'hhh'):
-	    @aV$eKzhIRLqEw@ = 2
-	    print @aV$eKzhIRLqEw@, args
-	    lvar = 3
-	
-	    def @@Bw&_l3)SC@():
-	        print lvar, second_l
-	
-	    return @K1JX2ei&As76Vk)@
-	
-	
-	class MyClass(object):
-	
-	    def @!8+CrKSDT0Pn@(self):
-	        @it86I_4KyoF@ = 123
-	        self.id = @it86I_4KyoF@
-	
-	    def @AhRcWgoO_S!@(self):
-	        print self.id + 100
-	
-	
-	myfunc(args='this is test args')()
-	obj = MyClass()
-	print obj.id
-	obj.myfunc()
-	print getattr(obj, 'myfunc')
-	+++ okay decompyling test/test.pyc
-	# decompiled 1 files: 1 okay, 0 failed, 0 verify failed
-	# 2018.07.09 14:52:57 DST
-	```
+```python
+# 2018.07.09 14:52:57 DST
+#Embedded file name: @@xaBtIiWf6&hJq1@
+import sys
+import os as myos
+
+def @!FlsTUOG(i_+7BX@(args = None, second_l = 'hhh'):
+    @aV$eKzhIRLqEw@ = 2
+    print @aV$eKzhIRLqEw@, args
+    lvar = 3
+
+    def @@Bw&_l3)SC@():
+        print lvar, second_l
+
+    return @K1JX2ei&As76Vk)@
+
+
+class MyClass(object):
+
+    def @!8+CrKSDT0Pn@(self):
+        @it86I_4KyoF@ = 123
+        self.id = @it86I_4KyoF@
+
+    def @AhRcWgoO_S!@(self):
+        print self.id + 100
+
+
+myfunc(args='this is test args')()
+obj = MyClass()
+print obj.id
+obj.myfunc()
+print getattr(obj, 'myfunc')
++++ okay decompyling test/test.pyc
+# decompiled 1 files: 1 okay, 0 failed, 0 verify failed
+# 2018.07.09 14:52:57 DST
+```
 
 # more
 	your can process a directory recursively.
