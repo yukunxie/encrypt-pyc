@@ -27,7 +27,7 @@ random.seed(int(time.time()))
 USE_UNIQUE_VARNAME = False
 
 def gen_random_symbol(symbol_dict, key):
-    if key.startswith("@@"):
+    if key.startswith("@"):
         return key
     seed = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%^&*()_+=-"
 
