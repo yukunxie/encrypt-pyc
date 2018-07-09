@@ -91,3 +91,12 @@ optional arguments:
 	+++ okay decompyling test.pyc
 	# decompiled 1 files: 1 okay, 0 failed, 0 verify failed
 	# 2018.07.09 14:31:02 DST
+
+
+# more
+	your can process a directory recursively.
+	realxie$ python encrypt.py --input ./ --symbol symbols.txt
+
+
+# symbols
+	the symbols.txt is used to reconstruct debug messages.
