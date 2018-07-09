@@ -57,29 +57,30 @@ optional arguments:
 
 	the uncompile result is following. the code is unreadable.^^
 
-	# 2018.07.09 14:31:02 DST
-	#Embedded file name: @#6sGeSF3dK@
+	```
+	# 2018.07.09 14:52:57 DST
+	#Embedded file name: @@xaBtIiWf6&hJq1@
 	import sys
 	import os as myos
 	
-	def @0q9Fj3-XN4vcZg@(args = None, second_l = 'hhh'):
-	    @n@-bSEBzqf89@ = 2
-	    print @n@-bSEBzqf89@, args
+	def @!FlsTUOG(i_+7BX@(args = None, second_l = 'hhh'):
+	    @aV$eKzhIRLqEw@ = 2
+	    print @aV$eKzhIRLqEw@, args
 	    lvar = 3
 	
-	    def @q(C2*4GW)Q!PF@():
+	    def @@Bw&_l3)SC@():
 	        print lvar, second_l
 	
-	    return @^+jeTJU&ORy#zg@
+	    return @K1JX2ei&As76Vk)@
 	
 	
 	class MyClass(object):
 	
-	    def @gTu^@$3Nh062*G@(self):
-	        @mubZRLvHNG^@ = 123
-	        self.id = @mubZRLvHNG^@
+	    def @!8+CrKSDT0Pn@(self):
+	        @it86I_4KyoF@ = 123
+	        self.id = @it86I_4KyoF@
 	
-	    def @wC^U&#uvaHz1ifN@(self):
+	    def @AhRcWgoO_S!@(self):
 	        print self.id + 100
 	
 	
@@ -88,10 +89,10 @@ optional arguments:
 	print obj.id
 	obj.myfunc()
 	print getattr(obj, 'myfunc')
-	+++ okay decompyling test.pyc
+	+++ okay decompyling test/test.pyc
 	# decompiled 1 files: 1 okay, 0 failed, 0 verify failed
-	# 2018.07.09 14:31:02 DST
-
+	# 2018.07.09 14:52:57 DST
+	```
 
 # more
 	your can process a directory recursively.
