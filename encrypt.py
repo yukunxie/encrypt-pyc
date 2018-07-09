@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 '''
-*** Date        :    2018-07-09 13:24:39
-*** Author        :     realxie/解玉坤
-*** Email         :     jinyun2007@126.com
-*** Description    :     replace local variable name with unreadable names / 对编译后的pyc文件进行加密，
-***                    将pyc中的局部变量名称进行不可读替换，使得反编译后的py文件无法执行
-*** Version     :    for python27
+*** Date         :  2018-07-09 13:24:39
+*** Author       :  realxie/解玉坤
+*** Email        :  jinyun2007@126.com
+*** Description  :  replace local variable name with unreadable names / 对编译后的pyc文件进行加密，
+***                  将pyc中的局部变量名称进行不可读替换，使得反编译后的py文件无法执行
+*** Version      :  for python27
 '''
 import dis
 import marshal
