@@ -57,7 +57,7 @@ optional arguments:
 
 	the uncompile result is following. the code is unreadable.^^
 
-	```
+	```python
 	# 2018.07.09 14:52:57 DST
 	#Embedded file name: @@xaBtIiWf6&hJq1@
 	import sys
