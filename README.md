@@ -15,7 +15,7 @@ optional arguments:
 
 # testcase
 ## 1 uncompile test.pyc with uncompyle2
-	realxie$ ncompyle2 test.pyc
+	realxie$ ncompyle2 ./test/test.pyc
 	# 2018.07.09 14:27:09 DST
 	#Embedded file name: test.py
 	import sys
@@ -53,7 +53,7 @@ optional arguments:
 
 
 ## 2 encrypt the pyc
-	realxie$ python encrypt.py --input test.pyc --symbol symbols.txt
+	realxie$ python encrypt.py --input ./test/test.pyc --symbol ./test/symbols.txt
 
 	the uncompile result is following. the code is unreadable.^^
 
@@ -95,7 +95,7 @@ optional arguments:
 
 # more
 	your can process a directory recursively.
-	realxie$ python encrypt.py --input ./ --symbol symbols.txt
+	realxie$ python encrypt.py --input ./test/ --symbol ./test/symbols.txt
 
 
 # symbols
