@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 '''
-*** Date         :  2018-07-09 13:24:39
-*** Author       :  realxie/解玉坤
-*** Email        :  jinyun2007@126.com
-*** Description  :  replace local variable name with unreadable names / 对编译后的pyc文件进行加密，
-***                  将pyc中的局部变量名称进行不可读替换，使得反编译后的py文件无法执行
-*** Version      :  for python27
+# Date         :  2018-07-09 13:24:39
+# Author       :  realxie/解玉坤
+# Email        :  jinyun2007@126.com
+# Description  :  replace local variable name with unreadable names / 对编译后的pyc文件进行加密，
+#                  将pyc中的局部变量名称进行不可读替换，使得反编译后的py文件无法执行
+# Version      :  for python27
 '''
 import dis
 import marshal
@@ -19,23 +19,37 @@ import argparse
 
 random.seed(int(time.time()))
 
+
+'''
+# generate a new random name even for a same key
+# while, you can gen a same name for same key, optionally.
+'''
+USE_UNIQUE_VARNAME = False
+
 def gen_random_symbol(symbol_dict, key):
     if key.startswith("@@"):
         return key
-    seed = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+=-"
+    seed = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%^&*()_+=-"
+
+    if USE_UNIQUE_VARNAME and (key in symbol_dict):
+        return symbol_dict[key]
 
     # gen short random name
     for i in xrange(100):
         value = "@" + "".join(random.sample(seed, random.randint(10,15))) + "@"
         if value not in symbol_dict:
             symbol_dict[value] = key
+            if USE_UNIQUE_VARNAME:
+                symbol_dict[key] = value
             return value
 
     # gen a long random name
     while 1:
-        value = "@" + "".join(random.sample(seed, random.randint(15,20))) + "@"
+        value = "@" + "".join(random.sample(seed, random.randint(16,25))) + "@"
         if value not in symbol_dict:
             symbol_dict[value] = key
+            if USE_UNIQUE_VARNAME:
+                symbol_dict[key] = value
             return value
 
 
@@ -51,13 +65,15 @@ def load_symbol_file(filename):
                 continue
             (key, value) = text.split(" ")
             symbol_dict[key] = value
+            symbol_dict[value] = key
     return symbol_dict
 
 def save_symbol_file(filename, symbol_dict):
     with open(filename, "w") as fd:
         fd.truncate(0)
         for k, v in symbol_dict.iteritems():
-            fd.write("%s %s\n" % (k, v))
+            if k.startswith("@"):
+                fd.write("%s %s\n" % (k, v))
         fd.close()
 
 def gen_new_code(code, symbol_dict):
@@ -134,7 +150,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='encrypt pyc files.\npowered by realxie.')
     parser.add_argument('--input', help='the target pyc or direcotry')
     parser.add_argument('--symbol', help='the symbols file path')
+    parser.add_argument('--unique', help='whether use the unique random name for a same variable name(True/False, default is False)')
     args = parser.parse_args()
+
+    USE_UNIQUE_VARNAME = (args.unique != None) and bool(args.unique.lower() in ["true", "1"])
 
     symbol_dict = load_symbol_file(args.symbol)
     if os.path.isdir(args.input):
@@ -144,3 +163,4 @@ if __name__ == "__main__":
     save_symbol_file( args.symbol, symbol_dict)
 
     print "done."
+
